@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="lazMapViewerPkg"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Maciej Kaczkowski, ti_dic, Werner Pamler"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="source"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Component for viewing maps (Google, OpenStreetMap, etc). 
+This is a fork of MapViewer by ti_dic (https://sourceforge.net/p/roadbook/code/ci/master/tree/mapviewer/) which itself is based on the MapViewer by Maciej Kaczkowski (https://github.com/maciejkaczkowski/mapviewer)."/>
+    <License Value="GPL2 or later"/>
+    <Files Count="14">
+      <Item1>
+        <Filename Value="source/mvcache.pas"/>
+        <UnitName Value="mvCache"/>
+      </Item1>
+      <Item2>
+        <Filename Value="source/mvdownloadengine.pas"/>
+        <UnitName Value="mvDownloadEngine"/>
+      </Item2>
+      <Item3>
+        <Filename Value="source/mvdragobj.pas"/>
+        <UnitName Value="mvdragobj"/>
+      </Item3>
+      <Item4>
+        <Filename Value="source/mvengine.pas"/>
+        <UnitName Value="mvEngine"/>
+      </Item4>
+      <Item5>
+        <Filename Value="source/mvgeonames.pas"/>
+        <UnitName Value="mvGeoNames"/>
+      </Item5>
+      <Item6>
+        <Filename Value="source/mvgpsobj.pas"/>
+        <UnitName Value="mvgpsobj"/>
+      </Item6>
+      <Item7>
+        <Filename Value="source/mvjobqueue.pas"/>
+        <UnitName Value="mvJobQueue"/>
+      </Item7>
+      <Item8>
+        <Filename Value="source/mvjobs.pas"/>
+        <UnitName Value="mvJobs"/>
+      </Item8>
+      <Item9>
+        <Filename Value="source/mvmapprovider.pas"/>
+        <UnitName Value="mvMapProvider"/>
+      </Item9>
+      <Item10>
+        <Filename Value="source/mvtypes.pas"/>
+        <UnitName Value="mvtypes"/>
+      </Item10>
+      <Item11>
+        <Filename Value="source/mvmapviewer.pas"/>
+        <UnitName Value="mvmapviewer"/>
+      </Item11>
+      <Item12>
+        <Filename Value="source/mvextradata.pas"/>
+        <UnitName Value="mvextradata"/>
+      </Item12>
+      <Item13>
+        <Filename Value="source/mvdlefpc.pas"/>
+        <UnitName Value="mvDLEFpc"/>
+      </Item13>
+      <Item14>
+        <Filename Value="source/mvmapviewerreg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="mvMapViewerReg"/>
+      </Item14>
+    </Files>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="LCLBase"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>
