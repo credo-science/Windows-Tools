@@ -1,0 +1,3 @@
+MapViewer_Demo is a program showing the detections on the Googel map. 
+There must be a "Date" subfolder. The daily reports for the selected date are downloaded to him. 
+The link to the source of the download is in the program's code.
