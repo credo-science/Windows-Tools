@@ -7,6 +7,7 @@ Several programs presenting graphical detections. All written in Lazarus Pascal 
 
 3.Team Charts
 
+!Remember, in the program folder, there must be a "Data" subfolder!
 
 The program automatically downloads data from the server. These are text files with daily detections. The file format is:
 
