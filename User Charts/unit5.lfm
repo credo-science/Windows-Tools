@@ -4,7 +4,7 @@ object Form4: TForm4
   Top = 7
   Width = 1167
   Anchors = [akTop, akLeft, akRight, akBottom]
-  Caption = 'Users Chart  '
+  Caption = 'Users Chart  - Marek Knap (mpknap@wp.pl)'
   ClientHeight = 670
   ClientWidth = 1167
   Icon.Data = {
