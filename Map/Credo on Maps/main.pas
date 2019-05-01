@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Types, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, ComCtrls,  EditBtn, DateTimePicker, SynHighlighterPython,
+  StdCtrls, ComCtrls, EditBtn, DateTimePicker, SynHighlighterPython,
   DateUtils, mvGeoNames, mvMapViewer, mvTypes, wincrt, WinInet,
   lconvencoding, LCLIntf, Menus;
 
@@ -41,29 +41,29 @@ type
     MenuItem1: TMenuItem;
     TrackBar1: TTrackBar;
     ZoomTrackBar: TTrackBar;
-     procedure Button10Click(Sender: TObject);
+    procedure Button10Click(Sender: TObject);
     procedure Button11Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
-     procedure CbDoubleBufferChange(Sender: TObject);
+    procedure CbDoubleBufferChange(Sender: TObject);
     procedure CbFoundLocationsDrawItem(Control: TWinControl; Index: integer;
       ARect: TRect; State: TOwnerDrawState);
     procedure CbProvidersChange(Sender: TObject);
     procedure CbUseThreadsChange(Sender: TObject);
-     procedure DateTimePicker1Change(Sender: TObject);
+    procedure DateTimePicker1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
-     procedure MapViewMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
-      procedure MapViewZoomChange(Sender: TObject);
+    procedure MapViewMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
+    procedure MapViewZoomChange(Sender: TObject);
     procedure Panel1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
-     procedure TrackBar1Change(Sender: TObject);
+    procedure TrackBar1Change(Sender: TObject);
     procedure ZoomTrackBarChange(Sender: TObject);
 
   private
-     procedure UpdateDropdownWidth(ACombobox: TCombobox);
+    procedure UpdateDropdownWidth(ACombobox: TCombobox);
 
   public
     procedure ReadFromIni;
@@ -163,19 +163,22 @@ var
   gpsPt: TGpsPoint;
   dir, gpsName, user, user_name, team, lat, lon, spacja: string;
   time: qword;
-  i : integer;
+  i: integer;
   productFileIn: TextFile;
-   Date: TDateTime;
+  Date: TDateTime;
 begin
   label4.Caption := 'Detection for 24 h of day : ' + DateTimeToStr(DateTimePicker1.Date);
   FileName.Caption := (FormatDateTime('dd.mm.yyyy', Datetimepicker1.date));
   dir := GetCurrentDir;
+   If Not DirectoryExists('DATA') then
+    CreateDir ('DATA');
+
   chdir(dir + '\DATA');
   if FileExists(FileName.Caption + '.txt') = False then       {FileName. dla ....}
     if InternetConnected = True then
 
-      UrlCopyFile2('http://credo2.cyfronet.pl/auto/images/02/' + FileName.Caption +
-        '.txt', FileName.Caption + '.txt', 5);
+      UrlCopyFile2('http://credo2.cyfronet.pl/auto/images/02/' +
+        FileName.Caption + '.txt', FileName.Caption + '.txt', 5);
   //  MessageDlg('nie ma neta ', mtWarning, [mbOK], 0);
 
   if FileExists(FileName{2}.Caption + '.txt') then
@@ -220,11 +223,11 @@ begin
       closefile(productFileIn);
       label9.Caption := ' All Visable Detection : ' + IntToStr(i);
     end;
-  end;
+  end else   ShowMessage('Brak pliku na dysku lub brak sieci lub plik jeszcze nie istnieje');
+
   chdir(dir);
 
 end;
-
 
 
 
@@ -298,8 +301,8 @@ begin
   if FileExists(FileName.Caption + '.txt') = False then
     if InternetConnected = True then
 
-      UrlCopyFile2('http://credo2.cyfronet.pl/auto/images/02/' + FileName.Caption +
-        '.txt', FileName.Caption + '.txt', 5);
+      UrlCopyFile2('http://credo2.cyfronet.pl/auto/images/02/' +
+        FileName.Caption + '.txt', FileName.Caption + '.txt', 5);
   //  MessageDlg('nie ma neta ', mtWarning, [mbOK], 0);
 
   if FileExists(FileName.Caption + '.txt') then
@@ -450,7 +453,6 @@ end;
 
 
 
-
 procedure TMainForm.TrackBar1Change(Sender: TObject);
 var
   TS: TTimeStamp;
@@ -510,7 +512,7 @@ begin
 
       closefile(productFileIn);
       label9.Caption := ' All Visable Detection : ' + IntToStr(i);
-     end;
+    end;
   end;
   chdir(dir);
 end;
@@ -522,7 +524,9 @@ var
   L, T, W, H: integer;
   R: TRect;
   i: integer;
-   s: string;
+  s: string;
+
+
   pt: TRealPoint;
 begin
   ini := TMemIniFile.Create(CalcIniName);
