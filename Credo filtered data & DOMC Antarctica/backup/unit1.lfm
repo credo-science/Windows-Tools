@@ -1,0 +1,872 @@
+object Form1: TForm1
+  Left = 520
+  Height = 660
+  Top = 0
+  Width = 766
+  Caption = ' View of CREDO and DOMC Antarctica Data (Marek Knap&Slawomir Stuglik 2020)'
+  ClientHeight = 660
+  ClientWidth = 766
+  DragMode = dmAutomatic
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.6.0'
+  object DBGrid1: TDBGrid
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Memo2
+    Left = 185
+    Height = 152
+    Top = 579
+    Width = 39
+    Anchors = []
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+    Options2 = [goScrollToLastCol, goScrollToLastRow]
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.CharSet = EASTEUROPE_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    Visible = False
+  end
+  object Label4: TLabel
+    Left = 520
+    Height = 15
+    Top = 8
+    Width = 48
+    Caption = 'DBimage'
+    ParentColor = False
+  end
+  object Label1: TLabel
+    Left = 1216
+    Height = 1
+    Top = 544
+    Width = 1
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = DBGrid1
+    AnchorSideLeft.Side = asrBottom
+    Left = 224
+    Height = 1
+    Top = 16
+    Width = 1
+    ParentColor = False
+  end
+  object Label7: TLabel
+    AnchorSideLeft.Control = DBGrid1
+    AnchorSideLeft.Side = asrBottom
+    Left = 224
+    Height = 1
+    Top = 40
+    Width = 1
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clRed
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Memo2: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = DBGrid1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 87
+    Top = 735
+    Width = 216
+    BorderSpacing.Top = 4
+    Lines.Strings = (
+      'Memo2'
+    )
+    ScrollBars = ssBoth
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 416
+    Height = 25
+    Top = 472
+    Width = 75
+    Caption = 'Button2'
+    OnClick = Button2Click
+    TabOrder = 2
+    Visible = False
+  end
+  object Label9: TLabel
+    Left = 1039
+    Height = 15
+    Top = 354
+    Width = 3
+    Caption = ' '
+    Font.Color = clRed
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 266
+    Height = 15
+    Top = 329
+    Width = 40
+    Caption = 'Label10'
+    ParentColor = False
+  end
+  object Button3: TButton
+    Left = 416
+    Height = 25
+    Top = 496
+    Width = 75
+    Caption = 'Button3'
+    OnClick = Button3Click
+    TabOrder = 3
+    Visible = False
+  end
+  object Button4: TButton
+    Left = 512
+    Height = 25
+    Top = 464
+    Width = 75
+    Caption = 'Button4'
+    OnClick = Button4Click
+    TabOrder = 4
+    Visible = False
+  end
+  object Button5: TButton
+    Left = 504
+    Height = 25
+    Top = 496
+    Width = 75
+    Caption = 'Button5'
+    OnClick = Button5Click
+    TabOrder = 5
+    Visible = False
+  end
+  object StaticText1: TStaticText
+    Left = 32
+    Height = 17
+    Top = 552
+    Width = 65
+    Caption = 'StaticText1'
+    TabOrder = 6
+  end
+  object Label3: TLabel
+    Left = 121
+    Height = 15
+    Top = 552
+    Width = 34
+    Caption = 'Label3'
+    ParentColor = False
+  end
+  object DBGrid2: TDBGrid
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Memo2
+    Left = 364
+    Height = 58
+    Top = 597
+    Width = 41
+    Anchors = []
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource2
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+    Options2 = [goScrollToLastCol, goScrollToLastRow]
+    ParentFont = False
+    TabOrder = 7
+    TitleFont.CharSet = EASTEUROPE_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    Visible = False
+  end
+  object Button6: TButton
+    Left = 584
+    Height = 25
+    Top = 466
+    Width = 75
+    Caption = 'Button6'
+    OnClick = Button6Click
+    TabOrder = 8
+    Visible = False
+  end
+  object Button7: TButton
+    Left = 584
+    Height = 25
+    Top = 496
+    Width = 75
+    Caption = 'Button7'
+    OnClick = Button7Click
+    TabOrder = 9
+    Visible = False
+  end
+  object Chart3: TChart
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 106
+    Top = 554
+    Width = 587
+    AxisList = <    
+      item
+        Marks.Format = '%2:s'
+        Marks.LabelBrush.Style = bsClear
+        Marks.Style = smsLabel
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Intervals.Count = 500
+        Intervals.MaxLength = 500
+        Alignment = calBottom
+        Marks.Clipped = False
+        Marks.Format = '%2:s'
+        Marks.LabelBrush.Style = bsClear
+        Marks.Source = DateTimeIntervalChartSource3
+        Marks.Style = smsLabel
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Top = 5
+    object os5: TLineSeries
+      Marks.Shape = clsEllipse
+      Marks.Format = '%2:s'
+      Marks.Style = smsLabel
+      LinePen.Color = clLime
+      LineType = ltNone
+      Pointer.HorizSize = 10
+      Pointer.Style = psVertBar
+      Pointer.Visible = True
+      ShowPoints = True
+    end
+    object os6: TLineSeries
+    end
+  end
+  object DBGrid3: TDBGrid
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Memo2
+    Left = 200
+    Height = 152
+    Top = 513
+    Width = 39
+    Anchors = []
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource3
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+    Options2 = [goScrollToLastCol, goScrollToLastRow]
+    ParentFont = False
+    TabOrder = 11
+    TitleFont.CharSet = EASTEUROPE_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    Visible = False
+  end
+  object Label5: TLabel
+    Left = 1048
+    Height = 15
+    Top = 432
+    Width = 34
+    Caption = 'Label5'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 128
+    Height = 15
+    Top = 48
+    Width = 34
+    Caption = 'Label6'
+    ParentColor = False
+    OnClick = Label6Click
+  end
+  object Label8: TLabel
+    Left = 49
+    Height = 15
+    Top = 633
+    Width = 34
+    Caption = 'Label8'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 1096
+    Height = 25
+    Top = 376
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 12
+  end
+  object Chart2: TChart
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Chart3
+    Left = 0
+    Height = 296
+    Top = 253
+    Width = 584
+    AxisList = <    
+      item
+        Intervals.Count = 50
+        LabelSize = 1
+        Marks.Format = '%2:s'
+        Marks.LabelBrush.Style = bsClear
+        Marks.Style = smsLabel
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Intervals.Count = 20
+        Alignment = calBottom
+        Marks.Clipped = False
+        Marks.Format = '%2:s'
+        Marks.LabelBrush.Style = bsClear
+        Marks.Source = DateTimeIntervalChartSource1
+        Marks.Style = smsLabel
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Legend.MarginX = 2
+    Legend.Spacing = 1
+    Legend.UseSidebar = False
+    Legend.Visible = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 5
+    object os4: TLineSeries
+      Title = 'Atmospheric Pressure'
+    end
+    object unkor: TLineSeries
+      Title = 'DOMC ANTARCTICA/15min step.  '
+      LinePen.Color = clRed
+    end
+  end
+  object Chart1: TChart
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = Chart2
+    Left = 0
+    Height = 248
+    Top = 0
+    Width = 579
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Intervals.Count = 20
+        Alignment = calBottom
+        Marks.Format = '%2:s'
+        Marks.LabelBrush.Style = bsClear
+        Marks.Source = DateTimeIntervalChartSource1
+        Marks.Style = smsLabel
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Legend.UseSidebar = False
+    Legend.Visible = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    object os7: TLineSeries
+      Title = 'Number of CREDO Detections ( 15min/step)'
+      LinePen.Color = clLime
+      OnCustomDrawPointer = os7CustomDrawPointer
+    end
+    object os8: TLineSeries
+      LineType = ltNone
+      Pointer.Visible = True
+      ShowPoints = True
+    end
+  end
+  object Label11: TLabel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 726
+    Height = 15
+    Top = 328
+    Width = 40
+    Anchors = [akTop, akRight]
+    Caption = 'Label11'
+    ParentColor = False
+  end
+  object Label12: TLabel
+    Left = 765
+    Height = 1
+    Top = 572
+    Width = 1
+    ParentColor = False
+  end
+  object Button8: TButton
+    AnchorSideLeft.Control = Chart1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = SpinEdit1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = SpinEdit1
+    Left = 579
+    Height = 42
+    Top = 70
+    Width = 187
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Search'
+    OnClick = Button1Click
+    TabOrder = 15
+  end
+  object Label13: TLabel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 621
+    Height = 15
+    Top = 384
+    Width = 139
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 6
+    Caption = 'Right Click for point info   '
+    ParentColor = False
+  end
+  object DateTimePicker1: TDateTimePicker
+    AnchorSideLeft.Control = Chart1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = DateTimePicker2
+    Left = 579
+    Height = 23
+    Top = 24
+    Width = 108
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 16
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Anchors = [akTop, akLeft, akRight]
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 43831
+    Time = 0.380255868054519
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object DateTimePicker2: TDateTimePicker
+    AnchorSideLeft.Control = DateTimePicker1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 687
+    Height = 23
+    Top = 24
+    Width = 79
+    CenturyFrom = 1941
+    MaxDate = 43921
+    MinDate = 43831
+    TabOrder = 17
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Anchors = [akTop, akRight]
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 43892
+    Time = 0.380255868054519
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object Label14: TLabel
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = DateTimePicker2
+    AnchorSideBottom.Side = asrBottom
+    Left = 645
+    Height = 45
+    Top = 2
+    Width = 72
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Top = 2
+    BorderSpacing.Right = 49
+    Caption = 'Date From/To'
+    ParentColor = False
+  end
+  object SpinEdit1: TSpinEdit
+    AnchorSideLeft.Control = Label15
+    AnchorSideTop.Control = DateTimePicker1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 688
+    Height = 23
+    Top = 47
+    Width = 67
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 11
+    Increment = 5
+    MaxValue = 60
+    MinValue = 1
+    TabOrder = 18
+    Value = 15
+  end
+  object FloatSpinEdit1: TFloatSpinEdit
+    AnchorSideLeft.Control = Label16
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 651
+    Height = 23
+    Top = 584
+    Width = 107
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Right = 8
+    BorderSpacing.Bottom = 53
+    Increment = 0.5
+    MaxValue = 10
+    MinValue = 1
+    TabOrder = 19
+    Value = 4.5
+  end
+  object Label15: TLabel
+    AnchorSideLeft.Control = DateTimePicker1
+    AnchorSideRight.Control = SpinEdit1
+    Left = 579
+    Height = 15
+    Top = 48
+    Width = 109
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'minute/step'
+    ParentColor = False
+  end
+  object Label16: TLabel
+    AnchorSideLeft.Control = Chart3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = FloatSpinEdit1
+    AnchorSideBottom.Control = FloatSpinEdit1
+    AnchorSideBottom.Side = asrBottom
+    Left = 587
+    Height = 15
+    Top = 587
+    Width = 64
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 5
+    Caption = 'EQ mag > '
+    ParentColor = False
+  end
+  object RadioButton1: TRadioButton
+    AnchorSideLeft.Control = Chart2
+    AnchorSideLeft.Side = asrBottom
+    Left = 584
+    Height = 19
+    Top = 310
+    Width = 99
+    Caption = 'Corrected Data'
+    Checked = True
+    OnChange = Button1Click
+    TabOrder = 21
+    TabStop = True
+  end
+  object RadioButton2: TRadioButton
+    AnchorSideLeft.Control = Chart2
+    AnchorSideLeft.Side = asrBottom
+    Left = 584
+    Height = 19
+    Top = 336
+    Width = 114
+    Caption = 'UNcorrected Data'
+    OnChange = Button1Click
+    TabOrder = 20
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    left = 168
+    top = 56
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from Detections'
+    )
+    Params = <>
+    left = 88
+    top = 56
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = SQLite3Connection3
+    left = 584
+    top = 56
+  end
+  object SQLite3Connection1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    left = 712
+    top = 56
+  end
+  object OpenDialog1: TOpenDialog
+    left = 96
+    top = 176
+  end
+  object DbChartSource1: TDbChartSource
+    DataSource = DataSource1
+    left = 280
+    top = 56
+  end
+  object DateTimeIntervalChartSource1: TDateTimeIntervalChartSource
+    Params.Count = 500
+    Params.MaxLength = 300
+    Params.MinLength = 300
+    Params.NiceSteps = '5.2|10.5|100.0'
+    DateTimeFormat = 'yyyy-mm-dd hh:nn:ss'
+    DateTimeStepFormat.MonthFormat = 'mm-yyyy'
+    DateTimeStepFormat.WeekFormat = 'dd-mm'
+    DateTimeStepFormat.DayFormat = 'dd-mm'
+    Steps = [dtsYear, dtsMonth, dtsWeek, dtsDay, dtsHour, dtsMinute, dtsSecond]
+    left = 392
+    top = 34
+  end
+  object BufDataset1: TBufDataset
+    FieldDefs = <>
+    left = 938
+    top = 34
+  end
+  object ChartToolset1: TChartToolset
+    left = 464
+    top = 48
+    object ChartToolset1PanDragTool1: TPanDragTool
+      Shift = [ssLeft]
+    end
+    object ChartToolset1DataPointCrosshairTool1: TDataPointCrosshairTool
+    end
+    object ChartToolset1ZoomMouseWheelTool1: TZoomMouseWheelTool
+      ZoomFactor = 0.9
+    end
+    object ChartToolset1DataPointClickTool1: TDataPointClickTool
+      Shift = [ssRight]
+      OnAfterKeyDown = ChartToolset1DataPointClickTool1AfterKeyDown
+      OnAfterMouseDown = ChartToolset1DataPointClickTool1AfterKeyDown
+      OnPointClick = ChartToolset1DataPointClickTool1AfterKeyDown
+    end
+  end
+  object DateTimeIntervalChartSource2: TDateTimeIntervalChartSource
+    Params.Count = 500
+    Params.MaxLength = 300
+    Params.MinLength = 300
+    Params.NiceSteps = '5.2|10.5|100.0'
+    DateTimeFormat = 'yyyy-mm-dd hh:nn:ss'
+    DateTimeStepFormat.MonthFormat = 'mm-yyyy'
+    DateTimeStepFormat.WeekFormat = 'dd-mm'
+    DateTimeStepFormat.DayFormat = 'dd-mm'
+    Steps = [dtsYear, dtsMonth, dtsWeek, dtsDay, dtsHour, dtsMinute, dtsSecond]
+    left = 520
+    top = 352
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLQuery2
+    left = 320
+    top = 344
+  end
+  object DbChartSource2: TDbChartSource
+    DataSource = DataSource2
+    left = 424
+    top = 344
+  end
+  object ChartToolset2: TChartToolset
+    left = 664
+    top = 368
+    object ChartToolset1PanDragTool2: TPanDragTool
+      Shift = [ssLeft]
+    end
+    object ChartToolset1DataPointCrosshairTool2: TDataPointCrosshairTool
+    end
+    object ChartToolset1ZoomMouseWheelTool2: TZoomMouseWheelTool
+      ZoomFactor = 0.9
+    end
+    object ChartToolset1DataPointClickTool2: TDataPointClickTool
+      Shift = [ssRight]
+      OnAfterKeyDown = ChartToolset1DataPointClickTool1AfterKeyDown
+      OnAfterMouseDown = ChartToolset1DataPointClickTool1AfterKeyDown
+      OnPointClick = ChartToolset1DataPointClickTool1AfterKeyDown
+    end
+  end
+  object SQLQuery2: TSQLQuery
+    FieldDefs = <>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from Detections'
+    )
+    Params = <>
+    left = 232
+    top = 368
+  end
+  object DataSource3: TDataSource
+    DataSet = SQLQuery3
+    left = 312
+    top = 232
+  end
+  object SQLQuery3: TSQLQuery
+    FieldDefs = <>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from Detections'
+    )
+    Params = <>
+    left = 248
+    top = 232
+  end
+  object DbChartSource3: TDbChartSource
+    DataSource = DataSource3
+    left = 416
+    top = 232
+  end
+  object ChartToolset3: TChartToolset
+    left = 696
+    top = 232
+    object ChartToolset1PanDragTool3: TPanDragTool
+      Shift = [ssLeft]
+    end
+    object ChartToolset1DataPointCrosshairTool3: TDataPointCrosshairTool
+      OnAfterKeyDown = ChartToolset1DataPointCrosshairTool3AfterKeyDown
+    end
+    object ChartToolset1ZoomMouseWheelTool3: TZoomMouseWheelTool
+      ZoomFactor = 0.9
+    end
+    object ChartToolset1DataPointClickTool3: TDataPointClickTool
+      Shift = [ssRight]
+      OnAfterKeyDown = ChartToolset1DataPointClickTool1AfterKeyDown
+      OnAfterMouseDown = ChartToolset1DataPointClickTool1AfterKeyDown
+      OnPointClick = ChartToolset1DataPointClickTool1AfterKeyDown
+    end
+  end
+  object DateTimeIntervalChartSource3: TDateTimeIntervalChartSource
+    Params.Count = 500
+    Params.MaxLength = 300
+    Params.MinLength = 300
+    Params.NiceSteps = '5.2|10.5|100.0'
+    DateTimeFormat = 'yyyy-mm-dd hh:nn:szzz'
+    DateTimeStepFormat.MonthFormat = 'mm-yyyy'
+    DateTimeStepFormat.WeekFormat = 'dd-mm'
+    DateTimeStepFormat.DayFormat = 'dd-mm'
+    Steps = [dtsYear, dtsMonth, dtsWeek, dtsDay, dtsHour, dtsMinute, dtsSecond]
+    left = 552
+    top = 224
+  end
+  object SQLite3Connection2: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    left = 648
+    top = 224
+  end
+  object SQLite3Connection3: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    left = 736
+    top = 368
+  end
+  object SQLTransaction2: TSQLTransaction
+    Active = False
+    Database = SQLite3Connection3
+    left = 728
+    top = 240
+  end
+  object SQLTransaction3: TSQLTransaction
+    Active = False
+    Database = SQLite3Connection3
+    left = 800
+    top = 360
+  end
+  object ChartExtentLink1: TChartExtentLink
+    LinkedCharts = <    
+      item
+        Chart = Chart1
+      end    
+      item
+        Chart = Chart2
+      end    
+      item
+        Chart = Chart3
+      end>
+    Mode = elmOnlyX
+    left = 266
+    top = 177
+  end
+end
