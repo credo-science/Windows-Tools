@@ -4,8 +4,8 @@ object Form1: TForm1
   Top = -8
   Width = 1366
   Caption = 'CREDO Data vs  EarthQake (Marek Knap, Slawomir Stuglik 2020)'
-  ClientHeight = 705
-  ClientWidth = 1366
+  ClientHeight = 0
+  ClientWidth = 0
   DragMode = dmAutomatic
   OnCreate = FormCreate
   Position = poScreenCenter
@@ -425,8 +425,8 @@ object Form1: TForm1
     Top = 24
     Width = 108
     CenturyFrom = 1941
-    MaxDate = 2958465
-    MinDate = -53780
+    MaxDate = 44177
+    MinDate = 43466
     TabOrder = 13
     TrailingSeparator = False
     TextForNullDate = 'NULL'
@@ -436,7 +436,7 @@ object Form1: TForm1
     TimeFormat = tf24
     TimeDisplay = tdHMS
     DateMode = dmComboBox
-    Date = 43831
+    Date = 43466
     Time = 0.380255868054519
     UseDefaultSeparators = True
     HideDateTimeParts = []
@@ -452,7 +452,7 @@ object Form1: TForm1
     Top = 24
     Width = 79
     CenturyFrom = 1941
-    MaxDate = 43921
+    MaxDate = 43974
     MinDate = 43831
     TabOrder = 14
     TrailingSeparator = False
@@ -463,7 +463,7 @@ object Form1: TForm1
     TimeFormat = tf24
     TimeDisplay = tdHMS
     DateMode = dmComboBox
-    Date = 43892
+    Date = 43974
     Time = 0.380255868054519
     UseDefaultSeparators = True
     HideDateTimeParts = []
@@ -519,9 +519,9 @@ object Form1: TForm1
     BorderSpacing.Bottom = 53
     Increment = 0.5
     MaxValue = 10
-    MinValue = 1
+    MinValue = 4
     TabOrder = 16
-    Value = 4.5
+    Value = 5.5
   end
   object Label15: TLabel
     AnchorSideLeft.Control = DateTimePicker1
